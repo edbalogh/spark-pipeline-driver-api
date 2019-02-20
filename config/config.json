@@ -1,8 +1,6 @@
 {
-
     "specialization": {
     },
-
     "middleware": {
         "appsec": {
             "priority": 110,
@@ -18,8 +16,6 @@
                 ]
             }
         },
-        
-
         "static": {
             "module": {
                 "arguments": [ "path:./.build" ]
@@ -31,6 +27,8 @@
                 "arguments": [{ "directory": "path:./controllers" }]
             }
         }
-
+    },
+    "storage": {
+        "type": "file"
     }
 }

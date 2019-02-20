@@ -1,0 +1,49 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "required": ["id", "name", "steps"],
+    "id": {
+        "type": "string"
+    },
+    "name": {
+        "type": "string"
+    },
+    "steps": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "required": ["id", "name", "stepId"],
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "stepId": {
+                    "type": "string"
+                },
+                "params": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": ["name", "type", "value"],
+                        "properties": {
+                            "type": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "required": {
+                                "type": "boolean"
+                            },
+                            "value": {
+                                "type": "mixed"
+                            }
+                        }
+                    }
+                },
+                "engineMeta": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

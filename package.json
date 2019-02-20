@@ -11,12 +11,14 @@
         "watch": "nodemon server.js"
     },
     "dependencies": {
+        "ajv": "^6.9.1",
         "babel-eslint": "^10.0.1",
         "body-parser": "^1.18.3",
         "construx": "^1.0.0",
         "construx-copier": "^1.0.0",
         "eslint": "^1.10.3",
         "express": "^4.12.2",
+        "fs": "0.0.1-security",
         "kraken-js": "^2.0.0",
         "mongodb": "^3.1.13",
         "mongoose": "^5.4.13"

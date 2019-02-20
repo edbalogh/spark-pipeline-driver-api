@@ -1,39 +1,11 @@
-let mongoose = require('../lib/database');
+const schema = require('../schemas/pipeline-steps.json');
+const BaseModel = require('../lib/base.model');
 
-let PipelineStepsSchema = new mongoose.Schema({
-    id: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    displayName: {
-        type: String,
-        required: true
-    },
-    description: {
-        type: String
-    },
-    type: {
-        type: String
-    },
-    params: {
-        type: Array,
-        items: {
-            type: Object,
-            required: ['name', 'type'],
-            properties: {
-                type: {
-                    type: String
-                },
-                name: {
-                    type: String
-                }
-            }
-        }
-    },
-    engineMeta: {
-        type: Object
-    }
-});
 
-module.exports = mongoose.model('PipelineSteps', PipelineStepsSchema);
+class PipelineStepsModel extends BaseModel {
+    // custom model logic goes here
+}
+
+const model = new PipelineStepsModel('pipeline-steps', schema);
+
+module.exports = model;
