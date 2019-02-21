@@ -29,7 +29,7 @@
         }
     },
     "storage": {
-        "type": "mongodb",
+        "type": "file",
         "server": "localhost",
         "database": "pipeline"
     }
