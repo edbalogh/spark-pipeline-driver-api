@@ -1,47 +1,27 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "required": ["id", "name", "steps"],
-    "id": {
-        "type": "string"
-    },
-    "name": {
-        "type": "string"
-    },
-    "steps": {
-        "type": "array",
-        "items": {
+    "$id": "pipelines.json",
+    "$ref": "#/definitions/pipelines",
+    "definitions": {
+        "pipelines": {
             "type": "object",
-            "required": ["id", "name", "stepId"],
+            "required": [
+                "id",
+                "name",
+                "steps"
+            ],
             "properties": {
                 "id": {
                     "type": "string"
                 },
-                "stepId": {
+                "name": {
                     "type": "string"
                 },
-                "params": {
+                "steps": {
                     "type": "array",
                     "items": {
-                        "type": "object",
-                        "required": ["name", "type", "value"],
-                        "properties": {
-                            "type": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "required": {
-                                "type": "boolean"
-                            },
-                            "value": {
-                                "type": "mixed"
-                            }
-                        }
+                        "$ref": "pipeline-steps.json#/definitions/pipeline-steps"
                     }
-                },
-                "engineMeta": {
-                    "type": "object"
                 }
             }
         }
